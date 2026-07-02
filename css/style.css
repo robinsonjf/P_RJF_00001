@@ -1,0 +1,46 @@
+/* Ocultar barra de rolagem */
+::-webkit-scrollbar { display: none; }
+body { -ms-overflow-style: none; scrollbar-width: none; }
+html { scroll-behavior: smooth; }
+
+/* Animações e Efeitos do Design System */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes blurIn {
+  0% { opacity: 0; filter: blur(15px); transform: scale(0.95); }
+  100% { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+@keyframes beam-spin { to { transform: rotate(360deg); } }
+@keyframes lines-slide {
+  0% { background-position: 0 0; }
+  100% { background-position: 24px 0; }
+}
+
+.scroll-item {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.scroll-fade-up { animation-name: fadeInUp; }
+.scroll-blur-in { animation-name: blurIn; }
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Estilo de Gradiente de Borda Compartilhado */
+[style*="--border-gradient"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: var(--border-radius-before, inherit);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  background: var(--border-gradient);
+  pointer-events: none;
+}
