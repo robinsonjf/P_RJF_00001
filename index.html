@@ -66,16 +66,13 @@
     function Navbar() {
       return (
         <nav className="flex z-50 fixed w-full pt-6 pr-4 pl-4 top-0 right-0 left-0 items-center justify-center">
-          <div className="flex scroll-item scroll-fade-up bg-black/90 w-full max-w-5xl border-white/10 border rounded-full pt-1 pr-2 pb-1 pl-1 relative shadow-2xl backdrop-blur-md items-center justify-between min-h-[58px]">
-            {/* Logo Centralizado */}
-            <div className="absolute left-1/2 -translate-x-1/2 w-auto min-w-[200px] max-w-[50%]">
-              <a className="inline-flex items-center justify-center bg-gradient-to-br from-blue-600 to-indigo-600 w-full min-h-[40px] px-4 py-1.5 rounded-full font-oswald text-[11px] md:text-sm font-bold text-white tracking-tight text-center leading-tight" href="#hero">
-                Criação de landing pages, criação e modernização de sites.
+          <div className="flex scroll-item scroll-fade-up bg-black/90 w-full max-w-5xl border-white/10 border rounded-full pt-1 pr-2 pb-1 pl-6 relative shadow-2xl backdrop-blur-md items-center justify-between min-h-[58px]">
+            {/* Logo/Título */}
+            <div className="z-10 flex items-center">
+              <a className="font-oswald text-[10px] sm:text-xs md:text-sm font-bold tracking-wider text-white uppercase" href="#hero">
+                Nós construímos o seu desejo<span className="text-blue-500">.</span>
               </a>
             </div>
-
-            {/* Espaçador */}
-            <div className="flex-1"></div>
 
             {/* Ação à Direita */}
             <div className="flex items-center gap-2 relative z-10">
